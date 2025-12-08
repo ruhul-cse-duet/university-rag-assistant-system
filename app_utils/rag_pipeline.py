@@ -128,6 +128,12 @@ def ask_rag(university: str, query: str):
     prompt = f"""You are a concise University AI Assistant.
 Use ONLY the context below. If the answer is not in the context, reply exactly: "I don't have enough information to answer this question based on the provided context."
 
+CRITICAL RULES:
+- Do NOT invent, guess, or make up any URLs, links, or website addresses.
+- Only use URLs/links that are EXACTLY written in the context below.
+- If no URL is mentioned in the context, do NOT provide any URL in your answer.
+- Do NOT modify or correct URLs - use them exactly as they appear in context.
+
 Language:
 - Reply ONLY in the language of the user question. If mixed, use the last/dominant language.
 - Do NOT add any other language.
@@ -135,6 +141,7 @@ Language:
 
 Output format:
 - Return ONLY the answer sentence; no preamble or bullet points.
+- If mentioning URLs, copy them EXACTLY from the context.
 
 Context:
 {joined}
