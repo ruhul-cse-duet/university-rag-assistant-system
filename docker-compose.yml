@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  ragapp:
+    build: .
+    container_name: rag_university
+    ports:
+      - "8501:8501"
+    environment:
+      OPENAI_API_KEY: "${OPENAI_API_KEY}"
+    volumes:
+      - ./data:/app/data
