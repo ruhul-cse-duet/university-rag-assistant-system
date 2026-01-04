@@ -1,13 +1,12 @@
-# Free Local LLM Setup Guide (বাংলা)
+# Free Local LLM Setup Guide
 
-## 🚀 দ্রুত সেটআপ (Ollama - Recommended)
 
-### Step 1: Ollama ইনস্টল করুন
+### Step 1: Ollama install
 1. https://ollama.ai থেকে Ollama ডাউনলোড করুন
 2. Windows/Mac/Linux এর জন্য installer চালান
 3. Terminal/Command Prompt খুলুন
 
-### Step 2: Model ডাউনলোড করুন
+### Step 2: Model downloaded
 ```bash
 # Fast এবং ভাল quality এর জন্য (Recommended)
 ollama pull llama3.2
