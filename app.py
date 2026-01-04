@@ -1,3 +1,4 @@
+# this is main python file for project
 import streamlit as st
 # Load environment variables and validate API key
 import pkg_resources
@@ -13,8 +14,8 @@ url = st.text_input("University website URL:")
 
 # Advanced crawl controls so you can index full sites (notices, news, events, academics, etc.)
 with st.expander("Advanced crawl options (optional)"):
-    max_pages = st.number_input("Max HTML pages to crawl", min_value=10, max_value=2000, value=400, step=50)
-    max_pdfs = st.number_input("Max PDFs to fetch", min_value=0, max_value=500, value=120, step=10)
+    max_pages = st.number_input("Max HTML pages to crawl", min_value=10, max_value=200, value=400, step=50)
+    max_pdfs = st.number_input("Max PDFs to fetch", min_value=0, max_value=400, value=120, step=10)
     pdf_max_mb = st.number_input("Max PDF size (MB)", min_value=1, max_value=50, value=15, step=1)
     same_domain = st.checkbox("Stay within same domain", value=True)
 
